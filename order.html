@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semillas To Guapas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/e4c896ad96.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <img src="img/bee.webp" alt="abejita" id="bee">
+    <i class="fa-solid fa-bars" id="header-menu-icon"></i>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a>QUIENES SOMOS</a></li>
+        <li><a>CONTACTANOS</a></li>
+        <li><a href="order.html">PEDIDO</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <div id="side-menu">
+    <i class="fa-solid fa-bars" id="side-menu-icon"></i>
+    <ul>
+      <li><a href="index.html">INICIO</a></li>
+      <li><a>QUIENES SOMOS</a></li>
+      <li><a>CONTACTANOS</a></li>
+      <li><a href="order.html">PEDIDO</a></li>
+    </ul>
+
+
+  </div>
+
+  <div class="col-sm-12">
+    <form id="order">
+
+      <div class="row">
+
+        <div class="col-md-6 mb-3 mt-3">
+          <label for="seed" class="form-label">Semilla:</label>
+          <input type="text" class="form-control" id="seed" placeholder="Semilla..." name="seed">
+          <span id="seed-error">*Campo obligatorio</span>
+        </div>
+
+        <div class="col-md-6 mb-3 mt-3">
+          <label for="quantity" class="form-label">Cantidad:</label>
+          <input type="number" class="form-control" id="quantity" placeholder="Cantidad..." name="quantity">
+          <span id="quantity-error">*Campo obligatorio</span>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <label for="type" class="form-label">Variante/Color:</label>
+          <input type="text" class="form-control" id="type" placeholder="Variedad o color..." name="type">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="rehydratedYes" class="form-label">Rehidratada:</label>
+          <span id="rehydrated-error">*Campo obligatorio</span>
+          <div>
+            <input class="form-check-input" type="radio" name="rehydrated" id="rehydratedYes" value="yes">
+            <label class="form-check-label" for="rehydratedYes">Sí</label>
+          </div>
+          <div>
+            <input class="form-check-input" type="radio" name="rehydrated" id="rehydratedNo" value="no">
+            <label class="form-check-label" for="rehydratedNo">No</label>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Añadir</button>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="order-list">
+        <h2>Mi pedido</h2>
+        <ul id="order-list">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="blank">
+
+  </div>
+
+  <div id="footer">
+    <img src="img/ies.png" alt="el rincon">
+    <p>&copy; 2023 Semillas To Guapas. Todos los derechos reservados.</p>
+    <img src="img/arucas.png" alt="arucas">
+  </div>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/functions.js"></script>
+</body>
+
+</html>

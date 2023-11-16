@@ -17,6 +17,10 @@ and then, the gallery of products that I offer in my web
 As for this date, I had to update my project with some new features that we saw in our class. The idea was to bring a 
 parallax effect, bootstrap 5 styles and a CRUD form to our website project. I implemented most of these new features into 
 a new .html page in my folder to which you can access through a link in the header.
+In my CRUD form, I also have to validate the elements using javascript. I try to make mandatory those aspects that
+can't be empty and the others not, considering future updates that I plan to implement in next deliveries such as
+garden tools, fertilizers, etc, that's why I intentionally only validate aspects like seeds (which can be converted to 
+tool or any other product in the future) and quantity.Type and rehydratation may not be mandatory for future products.
 For this update, I also tried to correct my errors from the previous delivery which were: adjust my footer with new content
 to prove it is responsive, fully translate the image names to english and remove the side menu in big dispositives
 and add the content from the header into the side menu in small and medium dispositives.

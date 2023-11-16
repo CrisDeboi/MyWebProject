@@ -31,7 +31,7 @@ and add the content from the header into the side menu in small and medium dispo
 
 ## Acknowledgments
 
-  - **My beloved friends who helped me with this**
+  - **My beloved friends who helped me with this. Thanks Edu, you are a great man**
   - **My teacher Tiburcio Cruz Ravelo**
   - https://www.w3schools.com/css/css_rwd_mediaqueries.asp
   - https://css-tricks.com/snippets/css/a-guide-to-flexbox/

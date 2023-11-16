@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {  
+document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("header-menu-icon");
   const sideMenu = document.getElementById("side-menu");
 
@@ -20,14 +20,14 @@ let products = [
 ];
 
 function initialize() {
-  const ORDER_FORM = document.getElementById("order");  
+  const ORDER_FORM = document.getElementById("order");
   ORDER_FORM.addEventListener("submit", addProduct);
   window.addEventListener("scroll", moveImagesWhenUserScrolls);
   showProducts();
 }
 
-function moveImagesWhenUserScrolls() {  
-  const scrollPosition = window.scrollY;  
+function moveImagesWhenUserScrolls() {
+  const scrollPosition = window.scrollY;
   const bee = document.getElementById("bee");
   if (bee) {
     const parallaxSpeedY = -0.5;
@@ -35,18 +35,18 @@ function moveImagesWhenUserScrolls() {
     const zigzagFrequency = 0.005;
     const zigzagX = Math.sin(scrollPosition * zigzagFrequency) * zigzagSpeedX;
     bee.style.transform = `translate(${zigzagX}px, ${scrollPosition * parallaxSpeedY}px)`;
-  }  
+  }
 }
 
 
 function addProduct(event) {
-  event.preventDefault();  
+  event.preventDefault();
 
   const SEED = event.target.seed.value;
   const QUANTITY = event.target.quantity.value;
   const TYPE = event.target.type.value;
   const REHYDRATED = document.querySelector('input[name="rehydrated"]:checked') ? document.querySelector('input[name="rehydrated"]:checked').value : '';
-  
+
   if (!SEED || !QUANTITY) {
     if (!SEED) {
       document.getElementById("seed-error").style.visibility = "visible";
@@ -91,12 +91,12 @@ function showProducts() {
   ORDER_LIST.innerHTML = allProducts;
   if (products.length > 0) {
     ORDER_LIST.classList.add('bordered');
-  } else {    
+  } else {
     ORDER_LIST.classList.remove('bordered');
   }
 }
 
-function deleteProduct(productId) {  
+function deleteProduct(productId) {
   products.splice(productId, 1);
   showProducts();
 }

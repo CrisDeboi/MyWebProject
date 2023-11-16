@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  console.log('El DOM está completamente cargado y parseado');
+document.addEventListener("DOMContentLoaded", function () {  
   const menuIcon = document.getElementById("header-menu-icon");
   const sideMenu = document.getElementById("side-menu");
 
@@ -21,38 +20,33 @@ let products = [
 ];
 
 function initialize() {
-  const ORDER_FORM = document.getElementById("order");
-  console.log('Inicializando el formulario: ', ORDER_FORM);
+  const ORDER_FORM = document.getElementById("order");  
   ORDER_FORM.addEventListener("submit", addProduct);
   window.addEventListener("scroll", moveImagesWhenUserScrolls);
   showProducts();
 }
 
-function moveImagesWhenUserScrolls() {
-  const scrollPosition = window.scrollY;
+function moveImagesWhenUserScrolls() {  
+  const scrollPosition = window.scrollY;  
   const bee = document.getElementById("bee");
   if (bee) {
     const parallaxSpeedY = -0.5;
     const zigzagSpeedX = 100;
     const zigzagFrequency = 0.005;
     const zigzagX = Math.sin(scrollPosition * zigzagFrequency) * zigzagSpeedX;
-
     bee.style.transform = `translate(${zigzagX}px, ${scrollPosition * parallaxSpeedY}px)`;
-  }
+  }  
 }
 
 
 function addProduct(event) {
-  event.preventDefault();
-  console.log('Intentando añadir un producto');
+  event.preventDefault();  
 
   const SEED = event.target.seed.value;
   const QUANTITY = event.target.quantity.value;
   const TYPE = event.target.type.value;
   const REHYDRATED = document.querySelector('input[name="rehydrated"]:checked') ? document.querySelector('input[name="rehydrated"]:checked').value : '';
-
-  console.log(`Datos del producto: Semilla = ${SEED}, Cantidad = ${QUANTITY}, Rehidratada = ${REHYDRATED}`);
-
+  
   if (!SEED || !QUANTITY) {
     if (!SEED) {
       document.getElementById("seed-error").style.visibility = "visible";
@@ -93,11 +87,16 @@ function showProducts() {
         <button class="delete-button" onclick="deleteProduct(${index})">Eliminar</button>
       </li>`;
   });
+
   ORDER_LIST.innerHTML = allProducts;
+  if (products.length > 0) {
+    ORDER_LIST.classList.add('bordered');
+  } else {    
+    ORDER_LIST.classList.remove('bordered');
+  }
 }
 
-function deleteProduct(productId) {
-  console.log(`Eliminando producto con ID = ${productId}`);
+function deleteProduct(productId) {  
   products.splice(productId, 1);
   showProducts();
 }

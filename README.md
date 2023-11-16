@@ -13,6 +13,13 @@ I tried to use this web as reference: https://dribbble.com/shots/17396277-Web-si
 I liked the idea of this example web of having a header and right below it a subheader which contains other information,
 and then, the gallery of products that I offer in my web
 
+16/11/2023
+As for this date, I had to update my project with some new features that we saw in our class. The idea was to bring a 
+parallax effect, bootstrap 5 styles and a CRUD form to our website project. I implemented most of these new features into 
+a new .html page in my folder to which you can access through a link in the header.
+For this update, I also tried to correct my errors from the previous delivery which were: adjust my footer with new content
+to prove it is responsive, fully translate the image names to english and remove the side menu in big dispositives
+and add the content from the header into the side menu in small and medium dispositives.
 
 ## Authors
 

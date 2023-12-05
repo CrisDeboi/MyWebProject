@@ -13,7 +13,8 @@ I tried to use this web as reference: https://dribbble.com/shots/17396277-Web-si
 I liked the idea of this example web of having a header and right below it a subheader which contains other information,
 and then, the gallery of products that I offer in my web
 
-16/11/2023
+16/11/2023  
+
 As for this date, I had to update my project with some new features that we saw in our class. The idea was to bring a 
 parallax effect, bootstrap 5 styles and a CRUD form to our website project. I implemented most of these new features into 
 a new .html page in my folder to which you can access through a link in the header.
@@ -24,6 +25,14 @@ tool or any other product in the future) and quantity.Type and rehydratation may
 For this update, I also tried to correct my errors from the previous delivery which were: adjust my footer with new content
 to prove it is responsive, fully translate the image names to english and remove the side menu in big dispositives
 and add the content from the header into the side menu in small and medium dispositives.
+
+
+07/12/2023  
+
+As for this date, I had to update my project with some new features we saw in class. First of all I had to complete my 
+CRUD form with the Update button and its respective function. Next step was to implement scroll animations like a reveal
+effect which reveals the content of the page as you scroll down on it. I also implemented a function to use the 
+LocalStorage so the data I add in the form stays there while I travel to other pages.
 
 ## Authors
 

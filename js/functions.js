@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   const MENU_ICON = document.getElementById("header-menu-icon");
   const SIDE_MENU = document.getElementById("side-menu");
 
@@ -24,11 +25,14 @@ function initialize() {
   if (SAVED_PRODUCTS) {
     PRODUCTS = JSON.parse(SAVED_PRODUCTS);
   }
-  
+
   const ORDER_FORM = document.getElementById("order");
   ORDER_FORM.addEventListener("submit", addProduct);
   window.addEventListener("scroll", moveImagesWhenUserScrolls);
   showProducts();
+  window.addEventListener('scroll', revealElements);
+  revealElements();
+
 }
 
 function moveImagesWhenUserScrolls() {
@@ -175,4 +179,23 @@ function updateLocalStorage() {
   localStorage.setItem("products", JSON.stringify(PRODUCTS));
 }
 
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+
+
+window.addEventListener("scroll", reveal);
 initialize();
